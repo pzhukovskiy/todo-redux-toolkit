@@ -17,7 +17,7 @@ const ListTodo: FC<ListTodoType> = ({todo}) => {
     <TodoWrapper>
         {todo.length > 0 ? todo.map((name) => (
             <div key={name.id} style={{marginTop: '5px'}}>
-                <h2>{name.text}</h2>
+                <h4>{name.id + 1}. {name.text}</h4>
                 <Button $primary onClick={() => handleDelete(name.id)} style={{marginTop: '5px'}}>Удалить</Button>
             </div>
         )) : <span>Нет заданий</span>}
